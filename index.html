@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vestalis++ • Скачать</title>
+    <style>
+        :root {
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --text-muted: #64748b;
+            
+            /* Цвета кнопок */
+            --primary-color: #ff067c;
+            --primary-hover: #d40062;
+            --secondary-color: #5c2988;
+            --secondary-hover: #451d66;
+            
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #0f172a;
+                --card-bg: #1e293b;
+                --text-color: #f8fafc;
+                --text-muted: #94a3b8;
+                --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-card {
+            background-color: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            max-width: 480px;
+            width: 90%;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .download-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Главный логотип сверху */
+        .logo-container {
+            width: 96px;
+            height: 96px;
+            margin: 0 auto 1.5rem auto;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .logo-container svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin: 0 0 0.5rem 0;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        p {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin: 0 0 2rem 0;
+            line-height: 1.5;
+        }
+
+        .buttons-container {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .btn {
+            flex: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            border-radius: 14px;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            white-space: nowrap;
+        }
+
+        /* Настройки прозрачных SVG иконок */
+        .btn svg {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            display: block;
+        }
+
+        /* Розовая кнопка */
+        .btn-primary {
+            background-color: var(--primary-color);
+            box-shadow: 0 4px 14px rgba(255, 6, 124, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: scale(1.02);
+        }
+
+        /* Фиолетовая кнопка */
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            box-shadow: 0 4px 14px rgba(92, 41, 136, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--secondary-hover);
+            transform: scale(1.02);
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        @media (max-width: 480px) {
+            .buttons-container {
+                flex-direction: column;
+            }
+            .btn {
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="download-card">
+        <!-- Главный превью-логотип Vestalis++ -->
+        <div class="logo-container">
+            <svg viewBox="0 0 100 100" xmlns="http://w3.org">
+                <defs>
+                    <linearGradient id="main-logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#5c2988" />
+                        <stop offset="50%" stop-color="#bb0c81" />
+                        <stop offset="100%" stop-color="#ff067c" />
+                    </linearGradient>
+                </defs>
+                <rect width="100" height="100" rx="24" fill="url(#main-logo-grad)"/>
+                <path d="M 50,22 L 78,38 L 78,68 L 50,82 L 22,68 L 22,38 Z" fill="#ffffff" />
+                <path d="M 50,29 L 72,42 L 72,64 L 50,75 L 28,64 L 28,42 Z" fill="url(#main-logo-grad)" />
+            </svg>
+        </div>
+        
+        <h1>Vestalis++</h1>
+        <p>Лишись оков бытия. Стань лучше, используй Trapstalis</p>
+        
+        <div class="buttons-container">
+            <!-- Розовая кнопка: Только оригинальный белый шестиугольник без фона -->
+            <a href="Trapstalis.exe" download class="btn btn-primary">
+                <svg viewBox="0 0 100 100" xmlns="http://w3.org">
+                    <path d="M 50,22 L 78,38 L 78,68 L 50,82 L 22,68 L 22,38 Z" fill="#ffffff" />
+                </svg>
+                Скачать v1
+            </a>
+            
+            <!-- Фиолетовая кнопка: Оригинальный силуэт иконки "G" перекрашен в белый -->
+            <a href="Vestalis++.exe" download class="btn btn-secondary">
+                <svg viewBox="0 0 100 100" xmlns="http://w3.org">
+                    <path d="M 50,0 C 22.4,0 0,22.4 0,50 C 0,77.6 22.4,100 50,100 C 65,100 80,92 90,80 L 70,65 C 65,72 58,75 50,75 C 36.2,75 25,63.8 25,50 C 25,36.2 36.2,25 50,25 C 58,25 65,28 70,35 L 50,50 L 100,50 C 100,22.4 77.6,0 50,0 Z" fill="#ffffff"/>
+                </svg>
+                Скачать v2
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
